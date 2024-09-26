@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles scientifique</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+    <script>
+        function toggleText(event) {
+            const articleBubble = event.target.closest('.article-bubble');
+            const summary = articleBubble.querySelector('.article-summary');
+            const trad = articleBubble.querySelector('.article-trad');
+            const button = event.target;
+
+            if (summary.style.display === 'none') {
+                summary.style.display = 'block';
+                trad.style.display = 'none';
+                button.textContent = 'Voir la traduction';
+            } else {
+                summary.style.display = 'none';
+                trad.style.display = 'block';
+                button.textContent = 'Voir le texte original';
+            }
+        }
+    </script>
+    <style>
+        .article-trad {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bannière en haut de la page -->
+    <div class="banner">
+        <h1>IA_CTU scientifique</h1>
+        <a href="{% url 'articles_view' %}" class="back-to-articles-button">Articles business</a>
+    </div>
+
+    <!-- Conteneur pour les articles -->
+    <div class="container">
+        {% for article in articles %}
+            <div class="article-bubble">
+                <div class="article-header">
+                    <h2>{{ article.title }}</h2>
+                    <span class="article-date">{{ article.date }}</span>
+                </div>
+                <p class="article-summary">{{ article.summary }}</p>
+                <p class="article-trad">{{ article.resume_tr }}</p>
+
+                <button style="border:0px" class="article-link toggle-button" onclick="toggleText(event)">Voir la traduction</button>
+                <a href="{{ article.url }}" class="article-link">Voir plus</a>
+            </div>
+        {% empty %}
+            <p>No articles available.</p>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

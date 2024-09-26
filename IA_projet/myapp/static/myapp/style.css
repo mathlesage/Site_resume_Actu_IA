@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: 'HelveticaNeue-Light', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.banner {
+    background: linear-gradient(90deg, rgba(255,136,0,1) 0%, rgba(255,58,0,1) 100%);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    border-bottom: 5px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ajouté pour permettre le positionnement absolu du bouton */
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 3.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.banner .back-to-articles-button {
+    position: absolute;
+    right: 20px; /* Ajuster pour placer le bouton à droite */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.container {
+    width: 85%;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.article-bubble {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.article-bubble:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.article-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.article-header h2 {
+    margin: 0;
+    color: #ff5500;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.article-date {
+    color: #bbb;
+    font-size: 1em;
+}
+
+.article-summary,
+.article-trad {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.article-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    background-color: #ff5500;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.article-link:hover {
+    background-color: #e04e00;
+    transform: translateY(-3px);
+}
+
+.toggle-button {
+    background-color: #00aaff;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+    color: white;
+}
+
+.toggle-button:hover {
+    background-color: #008fcc;
+    transform: translateY(-3px);
+}
+
+.back-to-articles-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(36, 36, 36);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.back-to-articles-button:hover {
+    background-color: rgb(0, 0, 0);
+}
