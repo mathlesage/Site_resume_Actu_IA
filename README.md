@@ -8,8 +8,9 @@ Ce projet Django a pour but de scrapper les informations provenant de sites d'ac
 
 
 Fonctionnalités :
+
 Scraping d'articles d'actualités sur l'IA : Collecte automatique des articles provenant de plusieurs sites web spécialisés en IA (⚠️ non inclus dans ce dépôt pour des raisons de confidentialité).
-Résumé automatique avec LLM : Les articles récupérés sont résumés à l'aide d'un modèle de langage large (par exemple, GPT-4, BERT, etc.) afin de condenser l'information et fournir des résumés clairs et précis.
+Résumé automatique avec LLM : Les articles récupérés sont résumés à l'aide d'un modèle de langage large (LLAMA 7b) afin de condenser l'information et fournir des résumés clairs et précis.
 Publication sur le site : Les résumés sont ensuite publiés sur un site web accessible via l'interface utilisateur Django.
 Système de gestion des articles : Interface d'administration Django pour consulter, modifier, supprimer ou approuver les résumés avant publication.
 
